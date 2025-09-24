@@ -7,18 +7,48 @@
     <meta name="description" content="AI-Driven Predictive Waste Management System using IoT sensors for urban sustainability and optimized collection routes" />
     <meta name="author" content="Smart City Innovation Lab" />
 
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="AI-Driven Waste Management System for Urban Sustainability" />
     <meta property="og:description" content="AI-Driven Predictive Waste Management System using IoT sensors for urban sustainability and optimized collection routes" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Use a root-relative path so the image works after deploy (place og-image.png in your public/ or root folder) -->
+    <meta property="og:image" content="/og-image.png" />
+    <!-- Optional: specify image dimensions to help crawlers -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:title" content="AI-Driven Waste Management System for Urban Sustainability" />
+    <meta name="twitter:description" content="AI-Driven Predictive Waste Management System using IoT sensors for urban sustainability and optimized collection routes" />
+    <meta name="twitter:image" content="/og-image.png" />
+
+    <!-- Fallback / favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Canonical (update after you have a final URL) -->
+    <link rel="canonical" href="/" />
+
+    <!-- Helpful robots defaults -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Small in-document guidance for future you -->
+    <!--
+      IMPORTANT:
+      1) Put your Open Graph / social preview image at the path /og-image.png in your project's public or root folder before deploying.
+         Recommended size: 1200 x 630 px (JPEG or PNG). Keep file size under ~300 KB for faster crawling.
+      2) If you don't have a custom domain yet, deploy to Vercel/Netlify/GitHub Pages — they provide a public subdomain (e.g. https://yourproject.vercel.app).
+      3) After deploying, test with Facebook Sharing Debugger and Twitter Card Validator.
+    -->
   </head>
 
   <body>
     <div id="root"></div>
+    <!--
+      If you're using a bundler (Vite/Parcel/CRA) keep the module script entry as-is.
+      If you deploy static HTML only, either remove this or point it to your built bundle.
+    -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
