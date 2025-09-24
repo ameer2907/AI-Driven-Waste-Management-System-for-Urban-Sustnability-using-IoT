@@ -11,9 +11,12 @@ export const Header = ({ activeTab, setActiveTab }: HeaderProps) => {
   const tabs = [
     { id: "overview", label: "Overview", icon: BarChart3 },
     { id: "monitoring", label: "Bin Monitoring", icon: Activity },
+    { id: "map", label: "Interactive Map", icon: Map },
+    { id: "image-upload", label: "AI Classification", icon: Cpu },
     { id: "routes", label: "Route Optimization", icon: Map },
     { id: "3d-model", label: "3D Hardware Model", icon: Eye },
-    { id: "analytics", label: "Predictive Analytics", icon: Cpu },
+    { id: "analytics", label: "Predictive Analytics", icon: BarChart3 },
+    { id: "admin", label: "Admin Panel", icon: Activity },
   ];
 
   return (

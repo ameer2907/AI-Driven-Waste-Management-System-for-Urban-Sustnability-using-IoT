@@ -134,6 +134,9 @@ export default {
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
         "data-flow": "data-flow 2s linear infinite",
+        "slide-up": "slide-up 0.4s ease-out",
+        "scale-in": "scale-in 0.3s ease-out",
+        "fade-in-up": "fade-in-up 0.5s ease-out",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
