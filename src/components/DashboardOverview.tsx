@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { Bin3DViewer } from "@/components/Bin3DViewer";
 import { 
   Trash2, 
   TrendingUp, 
@@ -9,7 +10,9 @@ import {
   AlertTriangle,
   CheckCircle,
   Clock,
-  Fuel
+  Fuel,
+  Activity,
+  BarChart3
 } from "lucide-react";
 
 export const DashboardOverview = () => {
@@ -89,6 +92,88 @@ export const DashboardOverview = () => {
             </Card>
           );
         })}
+      </div>
+
+      {/* 3D Bin Showcase */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Bin3DViewer 
+          fillLevel={85} 
+          status="warning"
+          temperature={24}
+          humidity={67}
+        />
+
+        {/* System Performance Chart */}
+        <Card className="bg-gradient-card border-border/50">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Activity className="h-5 w-5 text-primary" />
+              System Performance (24h)
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-6">
+              {/* Collection Efficiency Over Time */}
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium">Collection Efficiency</span>
+                  <span className="text-sm text-success">+12% vs yesterday</span>
+                </div>
+                <div className="h-32 flex items-end justify-between gap-1">
+                  {[65, 72, 68, 78, 82, 75, 87, 84, 91, 85, 89, 87].map((value, index) => (
+                    <div key={index} className="flex-1 flex flex-col items-center gap-1">
+                      <div 
+                        className="w-full bg-gradient-to-t from-primary to-primary-glow rounded-t transition-all duration-500 hover:opacity-80"
+                        style={{ height: `${value}%` }}
+                      />
+                      {index % 3 === 0 && (
+                        <span className="text-xs text-muted-foreground">{index * 2}h</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Waste Type Distribution */}
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <BarChart3 className="h-4 w-4 text-primary" />
+                  <span className="text-sm font-medium">Waste Type Distribution</span>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-xs text-muted-foreground">Recyclable</span>
+                      <span className="text-xs font-medium">42%</span>
+                    </div>
+                    <Progress value={42} className="h-2 bg-secondary/30" />
+                  </div>
+                  <div>
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-xs text-muted-foreground">Organic</span>
+                      <span className="text-xs font-medium">28%</span>
+                    </div>
+                    <Progress value={28} className="h-2 bg-secondary/30" />
+                  </div>
+                  <div>
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-xs text-muted-foreground">General</span>
+                      <span className="text-xs font-medium">22%</span>
+                    </div>
+                    <Progress value={22} className="h-2 bg-secondary/30" />
+                  </div>
+                  <div>
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-xs text-muted-foreground">Hazardous</span>
+                      <span className="text-xs font-medium">8%</span>
+                    </div>
+                    <Progress value={8} className="h-2 bg-secondary/30" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

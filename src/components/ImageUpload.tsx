@@ -225,8 +225,60 @@ export const ImageUpload = () => {
     }
   };
 
+  // Mock dataset and training stats
+  const datasetStats = {
+    totalImages: 15420,
+    classCount: 12,
+    accuracy: 87.3,
+    lastTrained: "2 days ago",
+    trainingDataBreakdown: [
+      { category: "Recyclable", count: 4820, percentage: 31 },
+      { category: "Biodegradable", count: 3950, percentage: 26 },
+      { category: "Non-recyclable", count: 3150, percentage: 20 },
+      { category: "Hazardous", count: 2100, percentage: 14 },
+      { category: "Unknown", count: 1400, percentage: 9 }
+    ]
+  };
+
   return (
     <div className="space-y-6">
+      {/* Dataset & Model Stats */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <Card className="bg-gradient-glow border-primary/20">
+          <CardContent className="p-4">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary">{datasetStats.accuracy}%</div>
+              <div className="text-xs text-muted-foreground mt-1">Model Accuracy</div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="bg-gradient-card border-border/50">
+          <CardContent className="p-4">
+            <div className="text-center">
+              <div className="text-3xl font-bold">{datasetStats.totalImages.toLocaleString()}</div>
+              <div className="text-xs text-muted-foreground mt-1">Training Images</div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="bg-gradient-card border-border/50">
+          <CardContent className="p-4">
+            <div className="text-center">
+              <div className="text-3xl font-bold">{datasetStats.classCount}</div>
+              <div className="text-xs text-muted-foreground mt-1">Waste Classes</div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="bg-gradient-card border-border/50">
+          <CardContent className="p-4">
+            <div className="text-center">
+              <div className="text-sm font-bold text-success">Active</div>
+              <div className="text-xs text-muted-foreground mt-1">Model Status</div>
+              <div className="text-xs text-muted-foreground">Updated {datasetStats.lastTrained}</div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
       <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
         <div>
           <h2 className="text-2xl font-bold">AI Waste Classification</h2>
@@ -459,6 +511,35 @@ export const ImageUpload = () => {
           </CardContent>
         </Card>
       </div>
+
+      {/* Dataset Distribution */}
+      <Card className="bg-gradient-card border-border/50">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Info className="h-5 w-5 text-primary" />
+            Training Dataset Distribution
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            {datasetStats.trainingDataBreakdown.map((item, index) => (
+              <div key={index} className="space-y-2">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="font-medium">{item.category}</span>
+                  <span className="text-muted-foreground">{item.count.toLocaleString()} images ({item.percentage}%)</span>
+                </div>
+                <Progress value={item.percentage} className="h-2" />
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 p-3 rounded-lg bg-iot-blue/10 border border-iot-blue/30">
+            <p className="text-xs text-muted-foreground">
+              <strong>Note:</strong> The model is trained on a balanced dataset from TrashNet, TACO, and custom local images. 
+              Target accuracy: 80-90% with continuous improvement through user feedback.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 };
