@@ -53,9 +53,10 @@
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(220 13% 6%));
-    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(220 13% 13%));
-    --gradient-glow: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--primary-glow) / 0.05));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(220 13% 5%));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card) / 0.9), hsl(220 13% 13%));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--primary) / 0.15), hsl(var(--primary-glow) / 0.05));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60% / 0.1), hsl(187 85% 53% / 0.05));
 
     /* Shadows */
     --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
@@ -92,10 +93,19 @@
 /* Custom Keyframe Animations */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    box-shadow: 0 0 25px hsl(var(--primary) / 0.4);
   }
   50% {
-    box-shadow: 0 0 40px hsl(var(--primary) / 0.6), 0 0 60px hsl(var(--primary) / 0.3);
+    box-shadow: 0 0 45px hsl(var(--primary) / 0.7), 0 0 70px hsl(var(--primary) / 0.4);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
   }
 }
 
@@ -181,4 +191,15 @@
   backdrop-filter: blur(16px);
   background: hsl(var(--card) / 0.8);
   border: 1px solid hsl(var(--border) / 0.5);
+}
+
+.shimmer-effect {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(var(--primary) / 0.1),
+    transparent
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
 }

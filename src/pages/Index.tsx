@@ -5,9 +5,6 @@ import { BinMonitoring } from "@/components/BinMonitoring";
 import { MapView } from "@/components/MapView";
 import { ImageUpload } from "@/components/ImageUpload";
 import { RouteOptimization } from "@/components/RouteOptimization";
-import { ThreeDVisualization } from "@/components/ThreeDVisualization";
-import { PredictiveAnalytics } from "@/components/PredictiveAnalytics";
-import { AdminPanel } from "@/components/AdminPanel";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -20,16 +17,10 @@ const Index = () => {
         return <BinMonitoring />;
       case "map":
         return <MapView />;
-      case "image-upload":
-        return <ImageUpload />;
       case "routes":
         return <RouteOptimization />;
-      case "3d-model":
-        return <ThreeDVisualization />;
-      case "analytics":
-        return <PredictiveAnalytics />;
-      case "admin":
-        return <AdminPanel />;
+      case "image-upload":
+        return <ImageUpload />;
       default:
         return <DashboardOverview />;
     }

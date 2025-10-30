@@ -75,7 +75,7 @@ export const DashboardOverview = () => {
                     <p className="text-muted-foreground text-sm">{stat.title}</p>
                     <p className="text-3xl font-bold mt-1">{stat.value}</p>
                     <div className="flex items-center mt-2">
-                      <span className={`text-sm ${stat.changeType === 'increase' ? 'text-success' : 'text-iot-orange'}`}>
+                       <span className={`text-sm ${stat.changeType === 'increase' ? 'text-success' : 'text-warning'}`}>
                         {stat.change}
                       </span>
                       <span className="text-muted-foreground text-sm ml-1">vs last week</span>

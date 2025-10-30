@@ -213,7 +213,7 @@ export const BinMonitoring = () => {
               {/* Sensor Data */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center gap-2">
-                  <Thermometer className="h-4 w-4 text-iot-orange" />
+                  <Thermometer className="h-4 w-4 text-warning" />
                   <div>
                     <p className="text-xs text-muted-foreground">Temperature</p>
                     <p className="font-medium">{bin.temperature}°C</p>

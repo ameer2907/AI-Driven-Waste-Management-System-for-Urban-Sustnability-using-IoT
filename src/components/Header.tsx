@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Cpu, BarChart3, Map, Eye, Activity, Wifi } from "lucide-react";
+import { Cpu, BarChart3, Map, Activity, Wifi, Navigation } from "lucide-react";
 
 interface HeaderProps {
   activeTab: string;
@@ -9,14 +9,11 @@ interface HeaderProps {
 
 export const Header = ({ activeTab, setActiveTab }: HeaderProps) => {
   const tabs = [
-    { id: "overview", label: "Overview", icon: BarChart3 },
-    { id: "monitoring", label: "Bin Monitoring", icon: Activity },
-    { id: "map", label: "Interactive Map", icon: Map },
-    { id: "image-upload", label: "AI Classification", icon: Cpu },
-    { id: "routes", label: "Route Optimization", icon: Map },
-    { id: "3d-model", label: "3D Hardware Model", icon: Eye },
-    { id: "analytics", label: "Predictive Analytics", icon: BarChart3 },
-    { id: "admin", label: "Admin Panel", icon: Activity },
+    { id: "overview", label: "Dashboard Overview", icon: BarChart3 },
+    { id: "monitoring", label: "Smart Bin Monitoring", icon: Activity },
+    { id: "map", label: "Live Map View", icon: Map },
+    { id: "routes", label: "Route Optimization", icon: Navigation },
+    { id: "image-upload", label: "AI Waste Classifier", icon: Cpu },
   ];
 
   return (

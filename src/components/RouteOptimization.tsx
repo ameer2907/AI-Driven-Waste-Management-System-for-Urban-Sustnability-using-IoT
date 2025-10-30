@@ -94,7 +94,7 @@ export const RouteOptimization = () => {
       value: "23",
       improvement: "-34%",
       icon: MapPin,
-      color: "text-iot-orange"
+      color: "text-warning"
     }
   ];
 

@@ -127,6 +127,14 @@ export default {
             opacity: "0",
           },
         },
+        "shimmer": {
+          "0%": {
+            backgroundPosition: "-1000px 0",
+          },
+          "100%": {
+            backgroundPosition: "1000px 0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -137,12 +145,14 @@ export default {
         "slide-up": "slide-up 0.4s ease-out",
         "scale-in": "scale-in 0.3s ease-out",
         "fade-in-up": "fade-in-up 0.5s ease-out",
+        "shimmer": "shimmer 3s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
         "gradient-dark": "var(--gradient-dark)",
         "gradient-card": "var(--gradient-card)",
         "gradient-glow": "var(--gradient-glow)",
+        "gradient-hero": "var(--gradient-hero)",
       },
       boxShadow: {
         "glow": "var(--shadow-glow)",
