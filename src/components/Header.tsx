@@ -29,9 +29,9 @@ export const Header = ({ activeTab, setActiveTab }: HeaderProps) => {
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                Smart Waste Management System
+                AI Driven Predictive Waste Management System
               </h1>
-              <p className="text-muted-foreground">AI-Driven Predictive IoT Solution</p>
+              <p className="text-muted-foreground">For Urban Sustainability using IoT</p>
             </div>
           </div>
           <div className="flex items-center gap-4">

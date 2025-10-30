@@ -16,10 +16,10 @@
     --popover: 220 13% 11%;
     --popover-foreground: 210 40% 95%;
 
-    /* IoT Green Theme */
-    --primary: 142 76% 36%;
+    /* IoT Dark Blue Theme */
+    --primary: 217 91% 60%;
     --primary-foreground: 210 40% 98%;
-    --primary-glow: 142 76% 50%;
+    --primary-glow: 217 91% 75%;
 
     --secondary: 220 13% 15%;
     --secondary-foreground: 210 40% 95%;
@@ -27,7 +27,7 @@
     --muted: 220 13% 15%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 142 76% 36%;
+    --accent: 217 91% 60%;
     --accent-foreground: 210 40% 98%;
 
     /* Alert Colors */
@@ -35,20 +35,20 @@
     --destructive-foreground: 210 40% 98%;
     --warning: 38 92% 50%;
     --warning-foreground: 220 13% 8%;
-    --success: 142 76% 36%;
+    --success: 142 76% 50%;
     --success-foreground: 210 40% 98%;
 
     --border: 220 13% 18%;
     --input: 220 13% 15%;
-    --ring: 142 76% 36%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
     /* Custom IoT Colors */
     --iot-blue: 217 91% 60%;
-    --iot-orange: 25 95% 53%;
+    --iot-cyan: 187 85% 53%;
     --iot-purple: 262 83% 58%;
-    --sensor-active: 142 76% 50%;
+    --sensor-active: 217 91% 60%;
     --sensor-inactive: 220 13% 35%;
 
     /* Gradients */

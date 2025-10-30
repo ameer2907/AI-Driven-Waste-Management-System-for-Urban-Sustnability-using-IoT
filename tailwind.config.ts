@@ -58,7 +58,7 @@ export default {
         },
         iot: {
           blue: "hsl(var(--iot-blue))",
-          orange: "hsl(var(--iot-orange))",
+          cyan: "hsl(var(--iot-cyan))",
           purple: "hsl(var(--iot-purple))",
         },
         sensor: {
