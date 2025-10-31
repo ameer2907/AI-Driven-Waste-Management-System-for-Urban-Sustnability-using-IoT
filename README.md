@@ -77,6 +77,3 @@ IoT Sensors → NodeMCU → Cloud/Database → Backend Server → Dashboard (Fro
 
 This project is for **academic and research purposes**. Reuse is allowed with proper credit.
 
----
-
-Would you like me to make this README formatted for **GitHub Markdown** with icons, section dividers, and color highlights (looks visually rich when uploaded)? I can style it that way next.
