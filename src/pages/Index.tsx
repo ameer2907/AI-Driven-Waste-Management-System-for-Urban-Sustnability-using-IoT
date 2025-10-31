@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { DashboardOverview } from "@/components/DashboardOverview";
-import { BinMonitoring } from "@/components/BinMonitoring";
-import { MapView } from "@/components/MapView";
 import { ImageUpload } from "@/components/ImageUpload";
-import { RouteOptimization } from "@/components/RouteOptimization";
 import { HardwareModel3D } from "@/components/HardwareModel3D";
 import { IntroAnimation } from "@/components/IntroAnimation";
 
@@ -26,12 +23,6 @@ const Index = () => {
         return <ImageUpload />;
       case "hardware-model":
         return <HardwareModel3D />;
-      case "monitoring":
-        return <BinMonitoring />;
-      case "map":
-        return <MapView />;
-      case "routes":
-        return <RouteOptimization />;
       default:
         return <DashboardOverview />;
     }
